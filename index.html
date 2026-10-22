@@ -1,256 +1,381 @@
-
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#101010">
-<title>HADABRA | Membangun dengan Integritas</title>
-<meta name="description" content="HADABRA — Integrated Construction Solutions. Membangun dengan integritas, kuat untuk masa depan.">
-<style>
-:root{--bg:#0d0e0f;--panel:#151617;--ink:#f4f1eb;--muted:#b7b3ab;--gold:#cba45d;--gold2:#e4c27b;--line:rgba(203,164,93,.28);--max:1200px}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65}
-a{color:inherit;text-decoration:none}
-img{display:block;max-width:100%}
-.container{width:min(var(--max),calc(100% - 40px));margin:auto}
-section{padding:80px 0}
-.eyebrow{color:var(--gold2);letter-spacing:.15em;text-transform:uppercase;font-size:.75rem;font-weight:700}
-h1,h2,h3,p{margin-top:0}
-h2{font-size:clamp(2rem,4vw,3rem);line-height:1.15;letter-spacing:-.04em}
-p{color:var(--muted)}
-.gold{color:var(--gold2)}
-.btn{display:inline-block;padding:13px 19px;background:linear-gradient(135deg,var(--gold2),#b68a43);color:#17130c;font-weight:750;border:1px solid #e6c983}
-.btn.secondary{background:transparent;color:var(--ink);border-color:var(--line)}
-header{position:sticky;top:0;z-index:10;background:#0d0e0ff2;border-bottom:1px solid #ffffff18}
-.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{font-size:1.5rem;font-weight:900;letter-spacing:.1em;color:var(--gold2)}
-.brand small{display:block;font-size:.55rem;letter-spacing:.22em;color:#eee}
-.navlinks{display:flex;gap:20px;font-size:.85rem}
-.navlinks a:hover{color:var(--gold2)}
-.hero{padding:70px 0;background:radial-gradient(ellipse at 80% 15%,#cba45d20,transparent 40%),linear-gradient(120deg,#0c0d0e,#171818)}
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
-.hero h1{font-size:clamp(2.6rem,5vw,4.7rem);line-height:1.05;letter-spacing:-.055em;margin:18px 0}
-.hero p{line-height:1.85}
-.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
-.hero-image{min-height:400px;border:1px solid var(--line);background:linear-gradient(135deg,#292720,#121313);display:flex;align-items:center;justify-content:center;text-align:center;padding:30px}
-.image-note{color:#d4cfc5;font-size:.9rem}
-.stats{display:flex;flex-wrap:wrap;justify-content:space-between;gap:15px;margin-top:45px;padding-top:20px;border-top:1px solid var(--line);font-size:.8rem}
-.stats span:before{content:"✦ ";color:var(--gold2)}
-.light{background:#f2eee6;color:#191918}
-.light p{color:#66645f}
-.values,.services,.projects,.process{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:30px}
-.value,.service,.project,.step{padding:25px;border:1px solid #ffffff16;background:#151617}
-.light .value{background:#faf7f0;border-color:#d6d0c5}
-.value h3,.service h3,.project h3,.step h3{margin:16px 0 8px}
-.value p,.service p,.project p,.step p{font-size:.9rem;line-height:1.7;margin-bottom:0}
-.num{color:var(--gold2);font-size:.8rem;letter-spacing:.12em}
-.about-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:50px}
-.quote{font-size:1.8rem;line-height:1.4;color:var(--gold2);border-left:2px solid var(--gold);padding-left:22px}
-.mission{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:25px}
-.mission div{padding:18px;background:var(--panel);border:1px solid #ffffff15}
-.mission b{display:block;color:var(--gold2);margin-bottom:8px}
-.mission span{font-size:.88rem;color:var(--muted)}
-.service{min-height:190px;background:linear-gradient(145deg,#1a1b1b,#111212)}
-.service .symbol{font-size:1.5rem;color:var(--gold2)}
-.project{min-height:180px;background:linear-gradient(145deg,#22231f,#141515)}
-.project .num{display:block;margin-bottom:24px}
-.project small{display:block;color:var(--gold2);margin-top:12px}
-.project-note{margin-top:20px;font-size:.8rem}
-.why{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
-.why article{border-top:1px solid var(--line);padding-top:20px}
-.process{grid-template-columns:repeat(4,minmax(0,1fr))}
-.step{background:#faf7f0;border-color:#d6d0c5}
-.step .number{font-size:2rem;color:#b28a47;font-weight:800}
-.contact{background:linear-gradient(110deg,#b58b46,#e0c17d);color:#15130e}
-.contact p{color:#3c3324;max-width:650px}
-.contact-inner{display:flex;justify-content:space-between;align-items:center;gap:25px}
-.contact .eyebrow{color:#3c2e18}
-.contact .btn{background:#111;color:#fff;border-color:#111;white-space:nowrap}
-footer{background:#090a0a;padding:38px 0 22px}
-.footer-top{display:flex;justify-content:space-between;gap:30px}
-.footer-top p{max-width:400px;font-size:.88rem}
-.footer-contact{font-size:.85rem}
-.footer-contact a{display:block;margin:8px 0}
-.footer-bottom{border-top:1px solid #ffffff18;padding-top:18px;margin-top:25px;color:#858179;font-size:.75rem}
-@media(max-width:850px){
- .nav{align-items:flex-start;padding:17px 0;flex-direction:column}
- .navlinks{flex-wrap:wrap;gap:12px}
- .hero-grid,.about-grid{grid-template-columns:1fr}
- .hero-image{min-height:250px}
- .values,.services,.projects,.why{grid-template-columns:repeat(2,minmax(0,1fr))}
- .process{grid-template-columns:repeat(2,minmax(0,1fr))}
- .contact-inner{align-items:flex-start;flex-direction:column}
-}
-@media(max-width:520px){
- section{padding:58px 0}
- .container{width:calc(100% - 32px)}
- .navlinks{font-size:.78rem}
- .hero{padding:48px 0}
- .hero h1{font-size:2.7rem}
- .values,.services,.projects,.why,.process,.mission{grid-template-columns:1fr}
- .footer-top{flex-direction:column}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101214">
+  <meta name="description" content="HADABRA — Integrated Construction Solutions. Membangun dengan Integritas, Kuat untuk Masa Depan.">
+  <title>HADABRA — Integrated Construction Solutions</title>
+  <style>
+    :root{
+      --bg:#101214; --bg2:#171a1d; --panel:rgba(255,255,255,.075);
+      --line:rgba(255,255,255,.13); --text:#f5f4f0; --muted:#b7b9b9;
+      --accent:#c6a66a; --accent2:#e2d0a7; --max:1240px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:100px}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;overflow-x:hidden}
+    body.locked{overflow:hidden}
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    button,a{-webkit-tap-highlight-color:transparent}
+    .wrap{width:min(var(--max),calc(100% - 48px));margin-inline:auto}
+    .eyebrow{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent2);font-weight:650}
+    .section{padding:110px 0;position:relative}
+    .section-head{max-width:700px;margin-bottom:38px}
+    .section-head h2{font-size:clamp(2rem,4.5vw,3.8rem);line-height:1.05;letter-spacing:-.045em;margin:12px 0 18px;font-weight:570}
+    .section-head p{color:var(--muted);max-width:620px;margin:0}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:14px 20px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.07);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);font-size:.88rem;font-weight:650;transition:transform .3s ease,background .3s ease,border-color .3s ease}
+    .btn:hover{transform:translateY(-3px);background:rgba(255,255,255,.13);border-color:rgba(255,255,255,.3)}
+    .btn-primary{background:var(--accent);color:#151515;border-color:transparent}
+    .btn-primary:hover{background:var(--accent2)}
+    .arrow{font-size:1.1rem;line-height:1}
+    /* Intro / blueprint */
+    .intro{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;background:#0d0f11;transition:opacity .8s ease,visibility .8s ease}
+    .intro.done{opacity:0;visibility:hidden;pointer-events:none}
+    .blueprint{position:absolute;inset:0;width:100%;height:100%;opacity:.38}
+    .blueprint path,.blueprint rect,.blueprint line,.blueprint polyline{fill:none;stroke:#bca16c;stroke-width:1;stroke-dasharray:900;stroke-dashoffset:900;animation:draw 2.3s ease forwards}
+    .blueprint .thin{stroke:#7d8c91;stroke-width:.7;animation-delay:.25s}
+    .intro-center{position:relative;text-align:center;padding:24px}
+    .intro-mark{width:min(220px,52vw);max-height:110px;object-fit:contain;margin:0 auto 20px}
+    .intro-name{letter-spacing:.28em;font-size:.75rem;color:#e7d7b2;text-transform:uppercase}
+    .intro-line{width:150px;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);margin:22px auto}
+    .intro-caption{font-size:.68rem;letter-spacing:.2em;color:#8e9698;text-transform:uppercase}
+    @keyframes draw{to{stroke-dashoffset:0}}
+    /* Header */
+    .site-header{position:fixed;z-index:50;top:16px;left:0;right:0;transition:top .35s ease}
+    .nav-shell{width:min(var(--max),calc(100% - 32px));margin:auto;padding:10px 14px 10px 18px;border:1px solid rgba(255,255,255,.13);border-radius:22px;background:rgba(20,22,24,.68);backdrop-filter:blur(24px) saturate(145%);-webkit-backdrop-filter:blur(24px) saturate(145%);display:flex;align-items:center;justify-content:space-between;gap:20px;box-shadow:0 10px 45px rgba(0,0,0,.18)}
+    .brand{display:flex;align-items:center;gap:12px;min-width:0}
+    .brand img{width:112px;height:43px;object-fit:contain;object-position:left center}
+    .brand-divider{height:30px;width:1px;background:var(--line)}
+    .brand-sub{font-size:.58rem;line-height:1.4;letter-spacing:.14em;color:#c5c6c3;text-transform:uppercase;max-width:130px}
+    .nav-links{display:flex;align-items:center;gap:clamp(14px,2vw,28px)}
+    .nav-links a{font-size:.78rem;color:#d4d5d2;transition:color .25s}
+    .nav-links a:hover{color:var(--accent2)}
+    .nav-cta{white-space:nowrap;padding:11px 15px;font-size:.76rem}
+    .menu-toggle{display:none;background:transparent;border:1px solid var(--line);border-radius:12px;color:white;width:42px;height:42px;font-size:1.25rem}
+    /* Hero */
+    .hero{min-height:100svh;position:relative;display:flex;align-items:flex-end;padding:170px 0 78px;isolation:isolate;overflow:hidden;background:#191c1e}
+    .hero-bg{position:absolute;inset:0;z-index:-3}
+    .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 54%;animation:heroZoom 16s ease-in-out infinite alternate}
+    .hero:before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(9,11,12,.88) 0%,rgba(9,11,12,.62) 46%,rgba(9,11,12,.12) 100%),linear-gradient(0deg,rgba(9,11,12,.78),transparent 54%)}
+    .hero:after{content:"";position:absolute;inset:0;z-index:-1;opacity:.14;background-image:linear-gradient(rgba(255,255,255,.11) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.11) 1px,transparent 1px);background-size:80px 80px;mask-image:linear-gradient(90deg,#000,transparent 80%)}
+    .hero-content{max-width:790px}
+    .hero-kicker{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+    .hero-kicker:before{content:"";height:1px;width:36px;background:var(--accent)}
+    .hero h1{font-size:clamp(3rem,8.2vw,7.4rem);line-height:.94;letter-spacing:-.065em;font-weight:560;margin:0 0 26px}
+    .hero h1 span{color:var(--accent2)}
+    .hero-lead{font-size:clamp(1rem,1.7vw,1.2rem);color:#e0e0dc;max-width:590px;margin:0 0 32px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-bottom{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-top:78px}
+    .hero-note{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:#d0d0cb}
+    .hero-scroll{display:flex;align-items:center;gap:12px;font-size:.68rem;letter-spacing:.17em;text-transform:uppercase;color:#c9cac6}
+    .scroll-line{height:1px;width:55px;background:rgba(255,255,255,.55)}
+    @keyframes heroZoom{from{transform:scale(1)}to{transform:scale(1.07)}}
+    /* Glass stat strip */
+    .trust-strip{position:relative;z-index:2;margin-top:-1px;background:#101214;border-bottom:1px solid rgba(255,255,255,.07)}
+    .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1);border-radius:22px;overflow:hidden;transform:translateY(-28px)}
+    .trust-item{padding:25px 28px;background:#151719}
+    .trust-item strong{display:block;font-size:.9rem;font-weight:600;margin-bottom:5px}
+    .trust-item span{font-size:.78rem;color:var(--muted)}
+    /* About */
+    .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(40px,8vw,120px);align-items:start}
+    .about-aside{border-left:1px solid var(--accent);padding:4px 0 4px 22px;color:#d0d1ce;font-size:.93rem}
+    .about-copy h2{font-size:clamp(2.2rem,5vw,4.5rem);line-height:1.04;letter-spacing:-.05em;margin:12px 0 25px;font-weight:560}
+    .about-copy p{color:var(--muted);max-width:670px}
+    .about-signature{display:flex;align-items:center;gap:12px;margin-top:28px;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent2)}
+    .about-signature:before{content:"";width:34px;height:1px;background:var(--accent)}
+    /* Gallery */
+    .gallery-section{background:linear-gradient(180deg,#101214,#151719 50%,#101214)}
+    .gallery-grid{display:grid;grid-template-columns:1.1fr .9fr .9fr;gap:16px}
+    .gallery-card{position:relative;min-height:420px;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.12);background:#222;isolation:isolate}
+    .gallery-card.tall{min-height:520px}
+    .gallery-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+    .gallery-card:hover img{transform:scale(1.055)}
+    .gallery-card:after{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(0deg,rgba(0,0,0,.82),transparent 65%)}
+    .gallery-meta{position:absolute;z-index:1;left:24px;right:24px;bottom:23px}
+    .gallery-meta small{color:var(--accent2);font-size:.67rem;text-transform:uppercase;letter-spacing:.19em}
+    .gallery-meta h3{font-size:1.35rem;font-weight:560;letter-spacing:-.025em;margin:8px 0 0}
+    .gallery-footnote{color:#9fa2a2;font-size:.75rem;margin:18px 0 0}
+    /* Capabilities */
+    .cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .cap-card{border:1px solid var(--line);border-radius:20px;padding:30px;background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025));backdrop-filter:blur(12px);transition:transform .35s,border-color .35s}
+    .cap-card:hover{transform:translateY(-5px);border-color:rgba(198,166,106,.55)}
+    .cap-index{color:var(--accent);font-size:.72rem;letter-spacing:.18em}
+    .cap-card h3{font-size:1.3rem;font-weight:560;margin:34px 0 12px}
+    .cap-card p{font-size:.88rem;color:var(--muted);margin:0}
+    .cap-label{display:inline-block;margin-top:22px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;color:#d5d4cf;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase}
+    /* Process */
+    .process{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+    .process-step{border-top:1px solid rgba(255,255,255,.22);padding-top:20px}
+    .process-step .num{font-size:.72rem;color:var(--accent);letter-spacing:.18em}
+    .process-step h3{font-size:1.08rem;font-weight:560;margin:17px 0 8px}
+    .process-step p{font-size:.83rem;color:var(--muted);margin:0}
+    /* CTA */
+    .contact-panel{position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.14);border-radius:28px;padding:clamp(30px,6vw,76px);background:radial-gradient(circle at 90% 10%,rgba(198,166,106,.15),transparent 35%),linear-gradient(135deg,#1d2022,#121416)}
+    .contact-panel:after{content:"";position:absolute;right:-90px;bottom:-190px;width:400px;height:400px;border:1px solid rgba(198,166,106,.17);border-radius:50%;box-shadow:0 0 0 35px rgba(198,166,106,.025),0 0 0 70px rgba(198,166,106,.02);pointer-events:none}
+    .contact-panel h2{font-size:clamp(2.2rem,5.8vw,5rem);line-height:1;letter-spacing:-.055em;font-weight:560;max-width:760px;margin:14px 0 22px}
+    .contact-panel p{color:var(--muted);max-width:570px;margin-bottom:30px}
+    footer{padding:30px 0 40px}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;border-top:1px solid var(--line);padding-top:25px}
+    .footer-brand{display:flex;align-items:center;gap:14px}
+    .footer-brand img{width:105px;height:38px;object-fit:contain}
+    .footer-brand span,.copyright{font-size:.72rem;color:#969a99}
+    .footer-links{display:flex;gap:20px;flex-wrap:wrap;font-size:.75rem;color:#c6c8c6}
+    /* Scroll reveal */
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+    @media(max-width:900px){
+      .nav-links{gap:13px}.nav-links a{font-size:.72rem}.nav-cta{display:none}
+      .gallery-grid{grid-template-columns:1fr 1fr}.gallery-card.tall{min-height:430px}.gallery-card:last-child{grid-column:span 2;min-height:350px}
+      .about-grid{grid-template-columns:1fr;gap:25px}.about-aside{max-width:620px}
+      .cap-grid{grid-template-columns:1fr 1fr}.process-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:680px){
+      .wrap{width:min(100% - 32px,var(--max))}
+      .section{padding:78px 0}
+      .site-header{top:9px}.nav-shell{width:calc(100% - 20px);padding:8px 10px 8px 13px;border-radius:18px}
+      .brand img{width:92px;height:38px}.brand-divider,.brand-sub{display:none}
+      .menu-toggle{display:block;flex-shrink:0}
+      .nav-links{display:none;position:absolute;top:calc(100% + 8px);left:10px;right:10px;padding:15px;border:1px solid var(--line);border-radius:18px;background:rgba(18,20,22,.96);backdrop-filter:blur(24px);flex-direction:column;align-items:stretch;gap:0}
+      .nav-links.open{display:flex}.nav-links a{padding:13px 10px;font-size:.9rem;border-bottom:1px solid rgba(255,255,255,.07)}.nav-links a:last-child{border-bottom:0}
+      .hero{padding:145px 0 34px;min-height:94svh}.hero-bg img{object-position:58% center}
+      .hero:before{background:linear-gradient(90deg,rgba(9,11,12,.8),rgba(9,11,12,.28)),linear-gradient(0deg,rgba(9,11,12,.8),transparent 80%)}
+      .hero h1{font-size:clamp(3.3rem,15vw,5.6rem)}.hero-lead{font-size:1rem}
+      .hero-bottom{margin-top:50px;align-items:flex-start}.hero-scroll{display:none}
+      .trust-grid{grid-template-columns:1fr;transform:translateY(-15px)}.trust-item{padding:18px 20px}
+      .gallery-grid{grid-template-columns:1fr;gap:12px}.gallery-card,.gallery-card.tall,.gallery-card:last-child{grid-column:auto;min-height:390px}
+      .cap-grid{grid-template-columns:1fr}.cap-card{padding:25px}.cap-card h3{margin-top:24px}
+      .process-grid{grid-template-columns:1fr;gap:28px}
+      .footer-inner{align-items:flex-start;flex-direction:column}.footer-links{gap:14px}
+      .contact-panel{border-radius:22px}
+    }
+  </style>
 </head>
-<body>
-<header>
-<div class="container nav">
-<a class="brand" href="#beranda">HADABRA<small>INTEGRATED CONSTRUCTION SOLUTIONS</small></a>
-<nav class="navlinks">
-<a href="#beranda">Beranda</a>
-<a href="#tentang">Tentang Kami</a>
-<a href="#layanan">Layanan</a>
-<a href="#proyek">Proyek</a>
-<a href="#proses">Proses Kerja</a>
-<a href="#kontak">Kontak</a>
-</nav>
-</div>
-</header>
+<body class="locked">
+  <!-- Intro animation: no external library required -->
+  <div class="intro" id="intro" aria-label="HADABRA introduction">
+    <svg class="blueprint" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <path d="M160 620V300L390 150L620 300V620H160Z"/>
+      <path d="M220 620V350H560V620M220 420H560M390 350V620"/>
+      <rect x="700" y="230" width="330" height="390"/>
+      <path d="M660 230H1070L1010 160H720Z"/>
+      <line x1="700" y1="360" x2="1030" y2="360"/><line x1="700" y1="490" x2="1030" y2="490"/>
+      <line class="thin" x1="80" y1="680" x2="1120" y2="680"/><line class="thin" x1="600" y1="90" x2="600" y2="720"/>
+      <path class="thin" d="M110 720V700H1090V720M130 100H330M870 100H1070"/>
+    </svg>
+    <div class="intro-center">
+      <img class="intro-mark" src="assets/hadabra-logo.png" alt="HADABRA logo" onerror="this.style.display='none'">
+      <div class="intro-name">Integrated Construction Solutions</div>
+      <div class="intro-line"></div>
+      <div class="intro-caption">Design · Build · Deliver</div>
+    </div>
+  </div>
 
-<main>
-<section class="hero" id="beranda">
-<div class="container">
-<div class="hero-grid">
-<div>
-<div class="eyebrow">Integrated Construction Solutions</div>
-<h1>Membangun dengan <span class="gold">Integritas,</span> Kuat untuk Masa Depan.</h1>
-<p>HADABRA membantu Anda merencanakan kebutuhan pembangunan melalui pendekatan desain dan konstruksi yang disesuaikan dengan kebutuhan proyek, dengan mengutamakan kualitas, profesionalisme, dan nilai jangka panjang.</p>
-<div class="actions">
-<a class="btn" href="https://wa.me/6282314731733" target="_blank" rel="noopener">Konsultasi Sekarang ↗</a>
-<a class="btn secondary" href="#layanan">Jelajahi Layanan ↓</a>
-</div>
-</div>
-<div class="hero-image">
-<div class="image-note">HADABRA<br><span class="gold">DESIGN · BUILD · RENOVATE</span><br><br>Area visual utama<br>Tambahkan gambar proyek resmi di sini.</div>
-</div>
-</div>
-<div class="stats">
-<span>Kualitas dalam setiap tahap</span>
-<span>Integritas dalam kerja sama</span>
-<span>Nilai jangka panjang</span>
-</div>
-</div>
-</section>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Navigasi utama">
+      <a class="brand" href="#home" aria-label="HADABRA Home">
+        <img src="assets/hadabra-logo.png" alt="Logo HADABRA">
+        <span class="brand-divider"></span>
+        <span class="brand-sub">Integrated<br>Construction Solutions</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Capabilities</a>
+        <a href="#projects">Visual Gallery</a>
+        <a href="#process">Our Process</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="btn btn-primary nav-cta" href="#contact">Start a Project <span class="arrow">↗</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+    </nav>
+  </header>
 
-<section class="light">
-<div class="container">
-<div class="eyebrow">Nilai Perusahaan</div>
-<h2>Prinsip yang menjadi dasar <span class="gold">setiap langkah.</span></h2>
-<div class="values">
-<article class="value"><div class="num">01 / QUALITY</div><h3>Kualitas</h3><p>Memperhatikan kualitas dan detail dalam perencanaan serta pelaksanaan sesuai kebutuhan proyek.</p></article>
-<article class="value"><div class="num">02 / INTEGRITY</div><h3>Integritas</h3><p>Menjunjung kejujuran, transparansi, dan tanggung jawab dalam hubungan profesional.</p></article>
-<article class="value"><div class="num">03 / STRENGTH</div><h3>Kekuatan</h3><p>Mengutamakan perencanaan yang matang dan pertimbangan kebutuhan jangka panjang.</p></article>
-</div>
-</div>
-</section>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-bg">
+        <img src="assets/hero-villa-dusk.png" alt="Visual arsitektur villa modern saat senja" fetchpriority="high">
+      </div>
+      <div class="wrap">
+        <div class="hero-content">
+          <div class="hero-kicker eyebrow">HADABRA · Bali, Indonesia</div>
+          <h1>Built on<br><span>Integrity.</span><br>Made to Last.</h1>
+          <p class="hero-lead">Membangun dengan Integritas, Kuat untuk Masa Depan.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Explore Visuals <span class="arrow">↗</span></a>
+            <a class="btn" href="#contact">Discuss Your Project <span class="arrow">→</span></a>
+          </div>
+        </div>
+        <div class="hero-bottom">
+          <div class="hero-note">Construction · Coordination · Delivery</div>
+          <a class="hero-scroll" href="#about"><span class="scroll-line"></span> Scroll to explore</a>
+        </div>
+      </div>
+    </section>
 
-<section id="tentang">
-<div class="container about-grid">
-<div>
-<div class="eyebrow">Tentang HADABRA</div>
-<div class="quote">“Membangun dengan integritas, kuat untuk masa depan.”</div>
-</div>
-<div>
-<h2>Solusi pembangunan yang dirancang sesuai kebutuhan.</h2>
-<p>HADABRA merupakan identitas usaha PT Hardika Dharma Baskara untuk menghadirkan solusi konstruksi dengan pendekatan yang menghubungkan kebutuhan desain, perencanaan, dan pelaksanaan proyek.</p>
-<p>Setiap proyek memiliki tujuan dan tantangan tersendiri. Komunikasi yang jelas, perencanaan yang cermat, serta perhatian pada kualitas menjadi bagian penting dalam pendekatan kerja kami.</p>
-<div class="mission">
-<div><b>Visi</b><span>Menjadi penyedia solusi pembangunan yang terpercaya dengan mengutamakan kualitas, profesionalisme, dan nilai jangka panjang.</span></div>
-<div><b>Misi</b><span>Menghadirkan solusi sesuai kebutuhan, menjaga integritas, dan membangun kemitraan profesional.</span></div>
-</div>
-</div>
-</div>
-</section>
+    <div class="trust-strip">
+      <div class="wrap">
+        <div class="trust-grid">
+          <div class="trust-item"><strong>Integrity in Every Step</strong><span>Clear communication and responsible coordination.</span></div>
+          <div class="trust-item"><strong>Built with Purpose</strong><span>Practical thinking from planning through execution.</span></div>
+          <div class="trust-item"><strong>One Project, One Direction</strong><span>A coordinated approach to project delivery.</span></div>
+        </div>
+      </div>
+    </div>
 
-<section class="light" id="layanan">
-<div class="container">
-<div class="eyebrow">Layanan</div>
-<h2>Satu pendekatan, beragam <span class="gold">kebutuhan proyek.</span></h2>
-<p>Rincian lingkup layanan dikonfirmasi berdasarkan kebutuhan dan kesepakatan setiap proyek.</p>
-<div class="services">
-<article class="service"><div class="symbol">⌂</div><h3>Design &amp; Build</h3><p>Pendekatan terintegrasi yang menghubungkan perencanaan desain dengan pelaksanaan konstruksi.</p></article>
-<article class="service"><div class="symbol">▧</div><h3>Konstruksi Bangunan</h3><p>Pekerjaan konstruksi berdasarkan kebutuhan, lingkup, dan spesifikasi yang disepakati.</p></article>
-<article class="service"><div class="symbol">↻</div><h3>Renovasi</h3><p>Pembaruan bangunan dengan mempertimbangkan kondisi eksisting dan tujuan penggunaan.</p></article>
-<article class="service"><div class="symbol">⌁</div><h3>Pemeliharaan</h3><p>Dukungan pemeliharaan bangunan sesuai kebutuhan dan kondisi yang telah ditinjau.</p></article>
-<article class="service"><div class="symbol">▤</div><h3>Interior &amp; Custom</h3><p>Kebutuhan interior dan elemen khusus berdasarkan fungsi ruang dan lingkup pekerjaan.</p></article>
-<article class="service"><div class="symbol">⌘</div><h3>Estimasi &amp; Konsultasi</h3><p>Diskusi awal untuk memahami kebutuhan dan menentukan langkah perencanaan selanjutnya.</p></article>
-</div>
-</div>
-</section>
+    <section class="section" id="about">
+      <div class="wrap about-grid">
+        <div class="about-aside reveal">
+          <div class="eyebrow">About HADABRA</div>
+          <p>PT Hardika Dharma Baskara</p>
+          <p>Ungasan, Kuta Selatan<br>Badung, Bali, Indonesia</p>
+        </div>
+        <div class="about-copy reveal">
+          <div class="eyebrow">A considered approach to construction</div>
+          <h2>Good projects begin with a clear foundation.</h2>
+          <p>HADABRA is presented here with a focus on integrity, practical coordination, and purposeful construction. We aim to make the project journey clearer—from the first conversation and scope definition to planning and delivery.</p>
+          <p>This website is an introduction to the company. Project-specific scope, schedules, costs, and deliverables are discussed and confirmed for each brief.</p>
+          <div class="about-signature">Membangun dengan Integritas, Kuat untuk Masa Depan</div>
+        </div>
+      </div>
+    </section>
 
-<section id="proyek">
-<div class="container">
-<div class="eyebrow">Portofolio</div>
-<h2>Ruang untuk ide, desain, dan <span class="gold">kemungkinan.</span></h2>
-<p>Bagian ini disiapkan untuk dokumentasi proyek dan visual desain yang telah dikonfirmasi.</p>
-<div class="projects">
-<article class="project"><span class="num">PROJECT 01</span><h3>Pembangunan Villa</h3><p>Tambahkan dokumentasi proyek dan informasi yang sudah diverifikasi.</p><small>Dokumentasi menunggu aset resmi</small></article>
-<article class="project"><span class="num">PROJECT 02</span><h3>Bangunan dan Rumah</h3><p>Tambahkan foto, lingkup pekerjaan, dan status proyek yang akurat.</p><small>Dokumentasi menunggu aset resmi</small></article>
-<article class="project"><span class="num">PROJECT 03</span><h3>Renovasi dan Interior</h3><p>Gunakan foto proyek aktual atau visualisasi dengan label yang jelas.</p><small>Dokumentasi menunggu aset resmi</small></article>
-</div>
-<p class="project-note">Catatan: bagian portofolio ini merupakan tempat pengisian konten. Jangan menyatakan visual konsep sebagai proyek selesai tanpa konfirmasi.</p>
-</div>
-</section>
+    <section class="section gallery-section" id="projects">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">Visual Gallery</div>
+          <h2>Ideas, spaces<br>and possibilities.</h2>
+          <p>A selection of architectural and interior visuals. Specific project details can be added once each image is matched to its confirmed project or concept.</p>
+        </div>
+        <div class="gallery-grid">
+          <article class="gallery-card tall reveal">
+            <img src="assets/project-villa-facade.png" alt="Visual fasad villa modern" loading="lazy">
+            <div class="gallery-meta"><small>01 / Exterior</small><h3>Modern Villa Facade</h3></div>
+          </article>
+          <article class="gallery-card reveal">
+            <img src="assets/project-courtyard-villa.png" alt="Visual villa tropis dengan courtyard dan kolam" loading="lazy">
+            <div class="gallery-meta"><small>02 / Architecture</small><h3>Tropical Courtyard</h3></div>
+          </article>
+          <article class="gallery-card reveal">
+            <img src="assets/project-kitchen-interior.png" alt="Visual interior dapur modern" loading="lazy">
+            <div class="gallery-meta"><small>03 / Interior</small><h3>Contemporary Kitchen</h3></div>
+          </article>
+        </div>
+        <p class="gallery-footnote">Note: Visuals are illustrative until the status of each image is confirmed as a completed project, ongoing project, or design concept.</p>
+      </div>
+    </section>
 
-<section class="light">
-<div class="container">
-<div class="eyebrow">Mengapa HADABRA</div>
-<h2>Bekerja dengan arah yang jelas.</h2>
-<div class="why">
-<article><div class="num">01 / MEMAHAMI</div><h3>Berangkat dari kebutuhan</h3><p>Memahami tujuan dan kondisi proyek sebelum membahas solusi.</p></article>
-<article><div class="num">02 / MERENCANAKAN</div><h3>Perencanaan terarah</h3><p>Menyelaraskan lingkup pekerjaan dan ekspektasi sejak awal.</p></article>
-<article><div class="num">03 / BERKOLABORASI</div><h3>Komunikasi dan tanggung jawab</h3><p>Menempatkan komunikasi dan koordinasi sebagai bagian penting kerja sama.</p></article>
-</div>
-</div>
-</section>
+    <section class="section" id="services">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">Capabilities</div>
+          <h2>One point of contact.<br>A coordinated process.</h2>
+          <p>These are high-level service categories for the website draft. Final service descriptions should match HADABRA’s confirmed business scope.</p>
+        </div>
+        <div class="cap-grid">
+          <article class="cap-card reveal">
+            <div class="cap-index">01 / CONSTRUCTION</div>
+            <h3>General Construction</h3>
+            <p>Construction planning and execution coordination for building projects, with scope and deliverables agreed before work begins.</p>
+            <span class="cap-label">Building Works</span>
+          </article>
+          <article class="cap-card reveal">
+            <div class="cap-index">02 / PROJECTS</div>
+            <h3>Specialist Projects</h3>
+            <p>Project-based works such as structural steel, lightweight steel, canopies, and metalwork—subject to confirmed capability and scope.</p>
+            <span class="cap-label">Project-Based Works</span>
+          </article>
+          <article class="cap-card reveal">
+            <div class="cap-index">03 / WORKSHOP</div>
+            <h3>Interior & Custom Work</h3>
+            <p>Interior fit-out and custom furniture concepts, coordinated to the requirements and specifications of each project.</p>
+            <span class="cap-label">Interior · Custom</span>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<section class="light" id="proses">
-<div class="container">
-<div class="eyebrow">Proses Kerja</div>
-<h2>Dari pembahasan awal menuju <span class="gold">langkah nyata.</span></h2>
-<div class="process">
-<article class="step"><div class="number">01</div><h3>Konsultasi Awal</h3><p>Membahas tujuan, kebutuhan, lokasi, dan gambaran awal proyek.</p></article>
-<article class="step"><div class="number">02</div><h3>Survei &amp; Pengumpulan Data</h3><p>Memahami kondisi lapangan dan informasi yang diperlukan.</p></article>
-<article class="step"><div class="number">03</div><h3>Perencanaan &amp; Penawaran</h3><p>Menyusun gambaran lingkup dan penawaran untuk dibahas bersama.</p></article>
-<article class="step"><div class="number">04</div><h3>Pelaksanaan &amp; Koordinasi</h3><p>Pekerjaan dilanjutkan berdasarkan lingkup dan kesepakatan.</p></article>
-</div>
-</div>
-</section>
+    <section class="section process" id="process">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">Our Process</div>
+          <h2>Clear steps.<br>Fewer surprises.</h2>
+        </div>
+        <div class="process-grid">
+          <div class="process-step reveal"><div class="num">STEP 01</div><h3>Discuss</h3><p>Understand the brief, site, priorities, and intended outcome.</p></div>
+          <div class="process-step reveal"><div class="num">STEP 02</div><h3>Define</h3><p>Align scope, assumptions, budget parameters, and deliverables.</p></div>
+          <div class="process-step reveal"><div class="num">STEP 03</div><h3>Plan</h3><p>Confirm proposal, schedule, responsibilities, and work sequence.</p></div>
+          <div class="process-step reveal"><div class="num">STEP 04</div><h3>Deliver</h3><p>Coordinate execution and communicate progress against the agreed scope.</p></div>
+        </div>
+      </div>
+    </section>
 
-<section class="contact" id="kontak">
-<div class="container contact-inner">
-<div>
-<div class="eyebrow">Mulai Diskusi</div>
-<h2>Punya rencana pembangunan?</h2>
-<p>Ceritakan kebutuhan proyek Anda. Kita mulai dengan diskusi awal untuk memahami lingkup dan langkah berikutnya.</p>
-</div>
-<a class="btn" href="https://wa.me/6282314731733?text=Halo%20HADABRA%2C%20saya%20ingin%20konsultasi%20proyek." target="_blank" rel="noopener">Hubungi HADABRA ↗</a>
-</div>
-</section>
-</main>
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="contact-panel reveal">
+          <div class="eyebrow">Start a conversation</div>
+          <h2>Have a project in mind?</h2>
+          <p>Share the basics of your project and we can start with a conversation about scope, requirements, and the next step.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/6282314731733" target="_blank" rel="noopener">WhatsApp HADABRA <span class="arrow">↗</span></a>
+            <a class="btn" href="mailto:hardikadharmabaskara@gmail.com">Send an Email <span class="arrow">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<footer>
-<div class="container">
-<div class="footer-top">
-<div>
-<div class="brand">HADABRA<small>INTEGRATED CONSTRUCTION SOLUTIONS</small></div>
-<p>Membangun dengan integritas, kuat untuk masa depan.</p>
-</div>
-<div class="footer-contact">
-<strong>PT Hardika Dharma Baskara</strong>
-<p>Jl. Pura Masuka, Ungasan, Kuta Selatan, Badung, Bali 80361</p>
-<a href="https://wa.me/6282314731733" target="_blank" rel="noopener">WhatsApp: +62 823-1473-1733</a>
-<a href="mailto:hardikadharmabaskara@gmail.com">hardikadharmabaskara@gmail.com</a>
-</div>
-</div>
-<div class="footer-bottom">© <span id="year">2026</span> HADABRA · PT Hardika Dharma Baskara</div>
-</div>
-</footer>
-<script>
-document.getElementById("year").textContent=new Date().getFullYear();
-</script>
+  <footer>
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <img src="assets/hadabra-logo.png" alt="Logo HADABRA">
+        <span>PT Hardika Dharma Baskara<br>Ungasan, Badung, Bali</span>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a><a href="#services">Capabilities</a><a href="#projects">Visual Gallery</a><a href="#contact">Contact</a>
+      </div>
+      <div class="copyright">© <span id="year"></span> HADABRA</div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const intro = document.getElementById('intro');
+      const finishIntro = () => {
+        if (!intro || intro.classList.contains('done')) return;
+        intro.classList.add('done');
+        document.body.classList.remove('locked');
+      };
+      window.addEventListener('load', () => setTimeout(finishIntro, 1900));
+      setTimeout(finishIntro, 3500);
+
+      const toggle = document.getElementById('menuToggle');
+      const links = document.getElementById('navLinks');
+      toggle.addEventListener('click', () => {
+        const open = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.textContent = open ? '×' : '☰';
+      });
+      links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+        toggle.textContent = '☰';
+      }));
+
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, {threshold:0.12});
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
 </body>
 </html>
