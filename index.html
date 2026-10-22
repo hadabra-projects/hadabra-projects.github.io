@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101820">
+  <meta name="description" content="HADABRA — Construction, Design & Digital Solutions.">
+  <title>HADABRA | Construction & Digital Solutions</title>
+
+  <style>
+    :root {
+      --bg: #101820;
+      --surface: #18232e;
+      --text: #f4f7fa;
+      --muted: #a7b4c2;
+      --accent: #d5ad67;
+      --line: rgba(255,255,255,.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(16,24,32,.94);
+      backdrop-filter: blur(14px);
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: 3px;
+    }
+
+    .brand span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      gap: 26px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .hero {
+      min-height: 590px;
+      display: flex;
+      align-items: center;
+      padding: 90px 0;
+      background:
+        radial-gradient(ellipse at 85% 35%,
+        rgba(213,173,103,.13), transparent 42%);
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-size: .76rem;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 8vw, 5.6rem);
+      line-height: 1.08;
+      letter-spacing: -3px;
+      margin: 22px 0;
+      max-width: 850px;
+    }
+
+    h1 span { color: var(--accent); }
+
+    .hero p {
+      max-width: 610px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border: 1px solid var(--accent);
+      font-weight: bold;
+      border-radius: 3px;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #101820;
+    }
+
+    section { padding: 82px 0; }
+
+    .section-title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.2;
+      margin: 12px 0 20px;
+    }
+
+    .intro {
+      color: var(--muted);
+      max-width: 700px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 36px;
+    }
+
+    .service {
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+    }
+
+    .service .number {
+      color: var(--accent);
+      font-size: .85rem;
+      letter-spacing: 2px;
+    }
+
+    .service h3 {
+      font-size: 1.25rem;
+      margin: 18px 0 10px;
+    }
+
+    .service p {
+      color: var(--muted);
+      font-size: .94rem;
+    }
+
+    .about {
+      background: #141e28;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .contact-panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--accent);
+      padding: 32px;
+      margin-top: 28px;
+    }
+
+    footer {
+      padding: 28px 0;
+      color: var(--muted);
+      font-size: .85rem;
+      border-top: 1px solid var(--line);
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 700px) {
+      .nav-links { gap: 12px; font-size: .78rem; }
+      .brand { font-size: 1.15rem; letter-spacing: 2px; }
+      .hero { min-height: 520px; }
+      h1 { letter-spacing: -1.5px; }
+      .services { grid-template-columns: 1fr; }
+      section { padding: 62px 0; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="container">
+      <a class="brand" href="#home">HADA<span>BRA</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="eyebrow">Construction · Design · Digital</div>
+        <h1>Building Ideas.<br><span>Creating Value.</span></h1>
+        <p>
+          HADABRA — Construction, Design & Digital Solutions.
+          Menghubungkan kebutuhan konstruksi, perencanaan desain,
+          dan solusi digital dalam satu visi.
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#services">
+            Explore Our Services
+          </a>
+          <a class="btn" href="#contact">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <div class="eyebrow">Who We Are</div>
+        <h2 class="section-title">Ideas into Reality.</h2>
+        <p class="intro">
+          HADABRA adalah identitas perusahaan yang menggabungkan
+          bidang konstruksi, desain teknis, dan pengembangan digital.
+          Detail profil, pengalaman, dan informasi legal perusahaan
+          akan ditampilkan berdasarkan dokumen resmi.
+        </p>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="eyebrow">What We Do</div>
+        <h2 class="section-title">Our Capabilities</h2>
+        <p class="intro">
+          Tiga bidang utama untuk memperkenalkan cakupan layanan HADABRA.
+        </p>
+
+        <div class="services">
+          <article class="service">
+            <div class="number">01 / CONSTRUCTION</div>
+            <h3>Construction</h3>
+            <p>
+              Informasi layanan konstruksi dan pelaksanaan proyek
+              akan dilengkapi sesuai ruang lingkup perusahaan.
+            </p>
+          </article>
+
+          <article class="service">
+            <div class="number">02 / DESIGN</div>
+            <h3>Technical Design</h3>
+            <p>
+              Perencanaan dan visualisasi teknis untuk mendukung
+              kebutuhan desain dan pengembangan proyek.
+            </p>
+          </article>
+
+          <article class="service">
+            <div class="number">03 / DIGITAL</div>
+            <h3>Digital Solutions</h3>
+            <p>
+              Pengembangan website dan solusi digital untuk
+              mendukung komunikasi serta kebutuhan bisnis.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="about">
+      <div class="container">
+        <div class="eyebrow">Let's Connect</div>
+        <h2 class="section-title">Have a Project in Mind?</h2>
+        <p class="intro">
+          Hubungi tim HADABRA untuk mendiskusikan kebutuhan proyek
+          dan potensi kerja sama.
+        </p>
+
+        <div class="contact-panel">
+          <h3>HADABRA</h3>
+          <p style="color:var(--muted);margin-top:8px">
+            Construction · Design · Digital Solutions
+          </p>
+          <p style="margin-top:18px">
+            Informasi kontak resmi akan ditambahkan setelah dikonfirmasi.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>© <span id="year"></span> HADABRA.</span>
+      <span>Construction · Design · Digital</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
