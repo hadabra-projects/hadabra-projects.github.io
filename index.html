@@ -1,331 +1,256 @@
 
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#101820">
-  <meta name="description" content="HADABRA — Construction, Design & Digital Solutions.">
-  <title>HADABRA | Construction & Digital Solutions</title>
-
-  <style>
-    :root {
-      --bg: #101820;
-      --surface: #18232e;
-      --text: #f4f7fa;
-      --muted: #a7b4c2;
-      --accent: #d5ad67;
-      --line: rgba(255,255,255,.12);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.7;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(1120px, 90%);
-      margin: auto;
-    }
-
-    header {
-      border-bottom: 1px solid var(--line);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(16,24,32,.94);
-      backdrop-filter: blur(14px);
-    }
-
-    nav {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .brand {
-      font-size: 1.5rem;
-      font-weight: 800;
-      letter-spacing: 3px;
-    }
-
-    .brand span { color: var(--accent); }
-
-    .nav-links {
-      display: flex;
-      gap: 26px;
-      color: var(--muted);
-      font-size: .9rem;
-    }
-
-    .hero {
-      min-height: 590px;
-      display: flex;
-      align-items: center;
-      padding: 90px 0;
-      background:
-        radial-gradient(ellipse at 85% 35%,
-        rgba(213,173,103,.13), transparent 42%);
-    }
-
-    .eyebrow {
-      color: var(--accent);
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      font-size: .76rem;
-      font-weight: bold;
-    }
-
-    h1 {
-      font-size: clamp(2.8rem, 8vw, 5.6rem);
-      line-height: 1.08;
-      letter-spacing: -3px;
-      margin: 22px 0;
-      max-width: 850px;
-    }
-
-    h1 span { color: var(--accent); }
-
-    .hero p {
-      max-width: 610px;
-      color: var(--muted);
-      font-size: 1.08rem;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 32px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 22px;
-      border: 1px solid var(--accent);
-      font-weight: bold;
-      border-radius: 3px;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #101820;
-    }
-
-    section { padding: 82px 0; }
-
-    .section-title {
-      font-size: clamp(2rem, 5vw, 3rem);
-      line-height: 1.2;
-      margin: 12px 0 20px;
-    }
-
-    .intro {
-      color: var(--muted);
-      max-width: 700px;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: 36px;
-    }
-
-    .service {
-      padding: 28px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 6px;
-    }
-
-    .service .number {
-      color: var(--accent);
-      font-size: .85rem;
-      letter-spacing: 2px;
-    }
-
-    .service h3 {
-      font-size: 1.25rem;
-      margin: 18px 0 10px;
-    }
-
-    .service p {
-      color: var(--muted);
-      font-size: .94rem;
-    }
-
-    .about {
-      background: #141e28;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .contact-panel {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-left: 3px solid var(--accent);
-      padding: 32px;
-      margin-top: 28px;
-    }
-
-    footer {
-      padding: 28px 0;
-      color: var(--muted);
-      font-size: .85rem;
-      border-top: 1px solid var(--line);
-    }
-
-    footer .container {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 700px) {
-      .nav-links { gap: 12px; font-size: .78rem; }
-      .brand { font-size: 1.15rem; letter-spacing: 2px; }
-      .hero { min-height: 520px; }
-      h1 { letter-spacing: -1.5px; }
-      .services { grid-template-columns: 1fr; }
-      section { padding: 62px 0; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101010">
+<title>HADABRA | Membangun dengan Integritas</title>
+<meta name="description" content="HADABRA — Integrated Construction Solutions. Membangun dengan integritas, kuat untuk masa depan.">
+<style>
+:root{--bg:#0d0e0f;--panel:#151617;--ink:#f4f1eb;--muted:#b7b3ab;--gold:#cba45d;--gold2:#e4c27b;--line:rgba(203,164,93,.28);--max:1200px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+section{padding:80px 0}
+.eyebrow{color:var(--gold2);letter-spacing:.15em;text-transform:uppercase;font-size:.75rem;font-weight:700}
+h1,h2,h3,p{margin-top:0}
+h2{font-size:clamp(2rem,4vw,3rem);line-height:1.15;letter-spacing:-.04em}
+p{color:var(--muted)}
+.gold{color:var(--gold2)}
+.btn{display:inline-block;padding:13px 19px;background:linear-gradient(135deg,var(--gold2),#b68a43);color:#17130c;font-weight:750;border:1px solid #e6c983}
+.btn.secondary{background:transparent;color:var(--ink);border-color:var(--line)}
+header{position:sticky;top:0;z-index:10;background:#0d0e0ff2;border-bottom:1px solid #ffffff18}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-size:1.5rem;font-weight:900;letter-spacing:.1em;color:var(--gold2)}
+.brand small{display:block;font-size:.55rem;letter-spacing:.22em;color:#eee}
+.navlinks{display:flex;gap:20px;font-size:.85rem}
+.navlinks a:hover{color:var(--gold2)}
+.hero{padding:70px 0;background:radial-gradient(ellipse at 80% 15%,#cba45d20,transparent 40%),linear-gradient(120deg,#0c0d0e,#171818)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,5vw,4.7rem);line-height:1.05;letter-spacing:-.055em;margin:18px 0}
+.hero p{line-height:1.85}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
+.hero-image{min-height:400px;border:1px solid var(--line);background:linear-gradient(135deg,#292720,#121313);display:flex;align-items:center;justify-content:center;text-align:center;padding:30px}
+.image-note{color:#d4cfc5;font-size:.9rem}
+.stats{display:flex;flex-wrap:wrap;justify-content:space-between;gap:15px;margin-top:45px;padding-top:20px;border-top:1px solid var(--line);font-size:.8rem}
+.stats span:before{content:"✦ ";color:var(--gold2)}
+.light{background:#f2eee6;color:#191918}
+.light p{color:#66645f}
+.values,.services,.projects,.process{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:30px}
+.value,.service,.project,.step{padding:25px;border:1px solid #ffffff16;background:#151617}
+.light .value{background:#faf7f0;border-color:#d6d0c5}
+.value h3,.service h3,.project h3,.step h3{margin:16px 0 8px}
+.value p,.service p,.project p,.step p{font-size:.9rem;line-height:1.7;margin-bottom:0}
+.num{color:var(--gold2);font-size:.8rem;letter-spacing:.12em}
+.about-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:50px}
+.quote{font-size:1.8rem;line-height:1.4;color:var(--gold2);border-left:2px solid var(--gold);padding-left:22px}
+.mission{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:25px}
+.mission div{padding:18px;background:var(--panel);border:1px solid #ffffff15}
+.mission b{display:block;color:var(--gold2);margin-bottom:8px}
+.mission span{font-size:.88rem;color:var(--muted)}
+.service{min-height:190px;background:linear-gradient(145deg,#1a1b1b,#111212)}
+.service .symbol{font-size:1.5rem;color:var(--gold2)}
+.project{min-height:180px;background:linear-gradient(145deg,#22231f,#141515)}
+.project .num{display:block;margin-bottom:24px}
+.project small{display:block;color:var(--gold2);margin-top:12px}
+.project-note{margin-top:20px;font-size:.8rem}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
+.why article{border-top:1px solid var(--line);padding-top:20px}
+.process{grid-template-columns:repeat(4,minmax(0,1fr))}
+.step{background:#faf7f0;border-color:#d6d0c5}
+.step .number{font-size:2rem;color:#b28a47;font-weight:800}
+.contact{background:linear-gradient(110deg,#b58b46,#e0c17d);color:#15130e}
+.contact p{color:#3c3324;max-width:650px}
+.contact-inner{display:flex;justify-content:space-between;align-items:center;gap:25px}
+.contact .eyebrow{color:#3c2e18}
+.contact .btn{background:#111;color:#fff;border-color:#111;white-space:nowrap}
+footer{background:#090a0a;padding:38px 0 22px}
+.footer-top{display:flex;justify-content:space-between;gap:30px}
+.footer-top p{max-width:400px;font-size:.88rem}
+.footer-contact{font-size:.85rem}
+.footer-contact a{display:block;margin:8px 0}
+.footer-bottom{border-top:1px solid #ffffff18;padding-top:18px;margin-top:25px;color:#858179;font-size:.75rem}
+@media(max-width:850px){
+ .nav{align-items:flex-start;padding:17px 0;flex-direction:column}
+ .navlinks{flex-wrap:wrap;gap:12px}
+ .hero-grid,.about-grid{grid-template-columns:1fr}
+ .hero-image{min-height:250px}
+ .values,.services,.projects,.why{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .process{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .contact-inner{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:520px){
+ section{padding:58px 0}
+ .container{width:calc(100% - 32px)}
+ .navlinks{font-size:.78rem}
+ .hero{padding:48px 0}
+ .hero h1{font-size:2.7rem}
+ .values,.services,.projects,.why,.process,.mission{grid-template-columns:1fr}
+ .footer-top{flex-direction:column}
+}
+</style>
 </head>
-
 <body>
-  <header>
-    <nav class="container">
-      <a class="brand" href="#home">HADA<span>BRA</span></a>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
+<header>
+<div class="container nav">
+<a class="brand" href="#beranda">HADABRA<small>INTEGRATED CONSTRUCTION SOLUTIONS</small></a>
+<nav class="navlinks">
+<a href="#beranda">Beranda</a>
+<a href="#tentang">Tentang Kami</a>
+<a href="#layanan">Layanan</a>
+<a href="#proyek">Proyek</a>
+<a href="#proses">Proses Kerja</a>
+<a href="#kontak">Kontak</a>
+</nav>
+</div>
+</header>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="container">
-        <div class="eyebrow">Construction · Design · Digital</div>
-        <h1>Building Ideas.<br><span>Creating Value.</span></h1>
-        <p>
-          HADABRA — Construction, Design & Digital Solutions.
-          Menghubungkan kebutuhan konstruksi, perencanaan desain,
-          dan solusi digital dalam satu visi.
-        </p>
-        <div class="actions">
-          <a class="btn btn-primary" href="#services">
-            Explore Our Services
-          </a>
-          <a class="btn" href="#contact">Get in Touch</a>
-        </div>
-      </div>
-    </section>
+<main>
+<section class="hero" id="beranda">
+<div class="container">
+<div class="hero-grid">
+<div>
+<div class="eyebrow">Integrated Construction Solutions</div>
+<h1>Membangun dengan <span class="gold">Integritas,</span> Kuat untuk Masa Depan.</h1>
+<p>HADABRA membantu Anda merencanakan kebutuhan pembangunan melalui pendekatan desain dan konstruksi yang disesuaikan dengan kebutuhan proyek, dengan mengutamakan kualitas, profesionalisme, dan nilai jangka panjang.</p>
+<div class="actions">
+<a class="btn" href="https://wa.me/6282314731733" target="_blank" rel="noopener">Konsultasi Sekarang ↗</a>
+<a class="btn secondary" href="#layanan">Jelajahi Layanan ↓</a>
+</div>
+</div>
+<div class="hero-image">
+<div class="image-note">HADABRA<br><span class="gold">DESIGN · BUILD · RENOVATE</span><br><br>Area visual utama<br>Tambahkan gambar proyek resmi di sini.</div>
+</div>
+</div>
+<div class="stats">
+<span>Kualitas dalam setiap tahap</span>
+<span>Integritas dalam kerja sama</span>
+<span>Nilai jangka panjang</span>
+</div>
+</div>
+</section>
 
-    <section id="about" class="about">
-      <div class="container">
-        <div class="eyebrow">Who We Are</div>
-        <h2 class="section-title">Ideas into Reality.</h2>
-        <p class="intro">
-          HADABRA adalah identitas perusahaan yang menggabungkan
-          bidang konstruksi, desain teknis, dan pengembangan digital.
-          Detail profil, pengalaman, dan informasi legal perusahaan
-          akan ditampilkan berdasarkan dokumen resmi.
-        </p>
-      </div>
-    </section>
+<section class="light">
+<div class="container">
+<div class="eyebrow">Nilai Perusahaan</div>
+<h2>Prinsip yang menjadi dasar <span class="gold">setiap langkah.</span></h2>
+<div class="values">
+<article class="value"><div class="num">01 / QUALITY</div><h3>Kualitas</h3><p>Memperhatikan kualitas dan detail dalam perencanaan serta pelaksanaan sesuai kebutuhan proyek.</p></article>
+<article class="value"><div class="num">02 / INTEGRITY</div><h3>Integritas</h3><p>Menjunjung kejujuran, transparansi, dan tanggung jawab dalam hubungan profesional.</p></article>
+<article class="value"><div class="num">03 / STRENGTH</div><h3>Kekuatan</h3><p>Mengutamakan perencanaan yang matang dan pertimbangan kebutuhan jangka panjang.</p></article>
+</div>
+</div>
+</section>
 
-    <section id="services">
-      <div class="container">
-        <div class="eyebrow">What We Do</div>
-        <h2 class="section-title">Our Capabilities</h2>
-        <p class="intro">
-          Tiga bidang utama untuk memperkenalkan cakupan layanan HADABRA.
-        </p>
+<section id="tentang">
+<div class="container about-grid">
+<div>
+<div class="eyebrow">Tentang HADABRA</div>
+<div class="quote">“Membangun dengan integritas, kuat untuk masa depan.”</div>
+</div>
+<div>
+<h2>Solusi pembangunan yang dirancang sesuai kebutuhan.</h2>
+<p>HADABRA merupakan identitas usaha PT Hardika Dharma Baskara untuk menghadirkan solusi konstruksi dengan pendekatan yang menghubungkan kebutuhan desain, perencanaan, dan pelaksanaan proyek.</p>
+<p>Setiap proyek memiliki tujuan dan tantangan tersendiri. Komunikasi yang jelas, perencanaan yang cermat, serta perhatian pada kualitas menjadi bagian penting dalam pendekatan kerja kami.</p>
+<div class="mission">
+<div><b>Visi</b><span>Menjadi penyedia solusi pembangunan yang terpercaya dengan mengutamakan kualitas, profesionalisme, dan nilai jangka panjang.</span></div>
+<div><b>Misi</b><span>Menghadirkan solusi sesuai kebutuhan, menjaga integritas, dan membangun kemitraan profesional.</span></div>
+</div>
+</div>
+</div>
+</section>
 
-        <div class="services">
-          <article class="service">
-            <div class="number">01 / CONSTRUCTION</div>
-            <h3>Construction</h3>
-            <p>
-              Informasi layanan konstruksi dan pelaksanaan proyek
-              akan dilengkapi sesuai ruang lingkup perusahaan.
-            </p>
-          </article>
+<section class="light" id="layanan">
+<div class="container">
+<div class="eyebrow">Layanan</div>
+<h2>Satu pendekatan, beragam <span class="gold">kebutuhan proyek.</span></h2>
+<p>Rincian lingkup layanan dikonfirmasi berdasarkan kebutuhan dan kesepakatan setiap proyek.</p>
+<div class="services">
+<article class="service"><div class="symbol">⌂</div><h3>Design &amp; Build</h3><p>Pendekatan terintegrasi yang menghubungkan perencanaan desain dengan pelaksanaan konstruksi.</p></article>
+<article class="service"><div class="symbol">▧</div><h3>Konstruksi Bangunan</h3><p>Pekerjaan konstruksi berdasarkan kebutuhan, lingkup, dan spesifikasi yang disepakati.</p></article>
+<article class="service"><div class="symbol">↻</div><h3>Renovasi</h3><p>Pembaruan bangunan dengan mempertimbangkan kondisi eksisting dan tujuan penggunaan.</p></article>
+<article class="service"><div class="symbol">⌁</div><h3>Pemeliharaan</h3><p>Dukungan pemeliharaan bangunan sesuai kebutuhan dan kondisi yang telah ditinjau.</p></article>
+<article class="service"><div class="symbol">▤</div><h3>Interior &amp; Custom</h3><p>Kebutuhan interior dan elemen khusus berdasarkan fungsi ruang dan lingkup pekerjaan.</p></article>
+<article class="service"><div class="symbol">⌘</div><h3>Estimasi &amp; Konsultasi</h3><p>Diskusi awal untuk memahami kebutuhan dan menentukan langkah perencanaan selanjutnya.</p></article>
+</div>
+</div>
+</section>
 
-          <article class="service">
-            <div class="number">02 / DESIGN</div>
-            <h3>Technical Design</h3>
-            <p>
-              Perencanaan dan visualisasi teknis untuk mendukung
-              kebutuhan desain dan pengembangan proyek.
-            </p>
-          </article>
+<section id="proyek">
+<div class="container">
+<div class="eyebrow">Portofolio</div>
+<h2>Ruang untuk ide, desain, dan <span class="gold">kemungkinan.</span></h2>
+<p>Bagian ini disiapkan untuk dokumentasi proyek dan visual desain yang telah dikonfirmasi.</p>
+<div class="projects">
+<article class="project"><span class="num">PROJECT 01</span><h3>Pembangunan Villa</h3><p>Tambahkan dokumentasi proyek dan informasi yang sudah diverifikasi.</p><small>Dokumentasi menunggu aset resmi</small></article>
+<article class="project"><span class="num">PROJECT 02</span><h3>Bangunan dan Rumah</h3><p>Tambahkan foto, lingkup pekerjaan, dan status proyek yang akurat.</p><small>Dokumentasi menunggu aset resmi</small></article>
+<article class="project"><span class="num">PROJECT 03</span><h3>Renovasi dan Interior</h3><p>Gunakan foto proyek aktual atau visualisasi dengan label yang jelas.</p><small>Dokumentasi menunggu aset resmi</small></article>
+</div>
+<p class="project-note">Catatan: bagian portofolio ini merupakan tempat pengisian konten. Jangan menyatakan visual konsep sebagai proyek selesai tanpa konfirmasi.</p>
+</div>
+</section>
 
-          <article class="service">
-            <div class="number">03 / DIGITAL</div>
-            <h3>Digital Solutions</h3>
-            <p>
-              Pengembangan website dan solusi digital untuk
-              mendukung komunikasi serta kebutuhan bisnis.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
+<section class="light">
+<div class="container">
+<div class="eyebrow">Mengapa HADABRA</div>
+<h2>Bekerja dengan arah yang jelas.</h2>
+<div class="why">
+<article><div class="num">01 / MEMAHAMI</div><h3>Berangkat dari kebutuhan</h3><p>Memahami tujuan dan kondisi proyek sebelum membahas solusi.</p></article>
+<article><div class="num">02 / MERENCANAKAN</div><h3>Perencanaan terarah</h3><p>Menyelaraskan lingkup pekerjaan dan ekspektasi sejak awal.</p></article>
+<article><div class="num">03 / BERKOLABORASI</div><h3>Komunikasi dan tanggung jawab</h3><p>Menempatkan komunikasi dan koordinasi sebagai bagian penting kerja sama.</p></article>
+</div>
+</div>
+</section>
 
-    <section id="contact" class="about">
-      <div class="container">
-        <div class="eyebrow">Let's Connect</div>
-        <h2 class="section-title">Have a Project in Mind?</h2>
-        <p class="intro">
-          Hubungi tim HADABRA untuk mendiskusikan kebutuhan proyek
-          dan potensi kerja sama.
-        </p>
+<section class="light" id="proses">
+<div class="container">
+<div class="eyebrow">Proses Kerja</div>
+<h2>Dari pembahasan awal menuju <span class="gold">langkah nyata.</span></h2>
+<div class="process">
+<article class="step"><div class="number">01</div><h3>Konsultasi Awal</h3><p>Membahas tujuan, kebutuhan, lokasi, dan gambaran awal proyek.</p></article>
+<article class="step"><div class="number">02</div><h3>Survei &amp; Pengumpulan Data</h3><p>Memahami kondisi lapangan dan informasi yang diperlukan.</p></article>
+<article class="step"><div class="number">03</div><h3>Perencanaan &amp; Penawaran</h3><p>Menyusun gambaran lingkup dan penawaran untuk dibahas bersama.</p></article>
+<article class="step"><div class="number">04</div><h3>Pelaksanaan &amp; Koordinasi</h3><p>Pekerjaan dilanjutkan berdasarkan lingkup dan kesepakatan.</p></article>
+</div>
+</div>
+</section>
 
-        <div class="contact-panel">
-          <h3>HADABRA</h3>
-          <p style="color:var(--muted);margin-top:8px">
-            Construction · Design · Digital Solutions
-          </p>
-          <p style="margin-top:18px">
-            Informasi kontak resmi akan ditambahkan setelah dikonfirmasi.
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
+<section class="contact" id="kontak">
+<div class="container contact-inner">
+<div>
+<div class="eyebrow">Mulai Diskusi</div>
+<h2>Punya rencana pembangunan?</h2>
+<p>Ceritakan kebutuhan proyek Anda. Kita mulai dengan diskusi awal untuk memahami lingkup dan langkah berikutnya.</p>
+</div>
+<a class="btn" href="https://wa.me/6282314731733?text=Halo%20HADABRA%2C%20saya%20ingin%20konsultasi%20proyek." target="_blank" rel="noopener">Hubungi HADABRA ↗</a>
+</div>
+</section>
+</main>
 
-  <footer>
-    <div class="container">
-      <span>© <span id="year"></span> HADABRA.</span>
-      <span>Construction · Design · Digital</span>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-  </script>
+<footer>
+<div class="container">
+<div class="footer-top">
+<div>
+<div class="brand">HADABRA<small>INTEGRATED CONSTRUCTION SOLUTIONS</small></div>
+<p>Membangun dengan integritas, kuat untuk masa depan.</p>
+</div>
+<div class="footer-contact">
+<strong>PT Hardika Dharma Baskara</strong>
+<p>Jl. Pura Masuka, Ungasan, Kuta Selatan, Badung, Bali 80361</p>
+<a href="https://wa.me/6282314731733" target="_blank" rel="noopener">WhatsApp: +62 823-1473-1733</a>
+<a href="mailto:hardikadharmabaskara@gmail.com">hardikadharmabaskara@gmail.com</a>
+</div>
+</div>
+<div class="footer-bottom">© <span id="year">2026</span> HADABRA · PT Hardika Dharma Baskara</div>
+</div>
+</footer>
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
